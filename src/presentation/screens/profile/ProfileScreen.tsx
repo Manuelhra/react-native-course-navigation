@@ -4,6 +4,7 @@ import {globalColors} from '../../themes/theme';
 import {PrimaryButton} from '../../components/PrimaryButton';
 import {DrawerActions, useNavigation} from '@react-navigation/native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
+import {MaterialBottomTabsNavigator} from '../../routes/BottomTabsNavigator';
 
 export const ProfileScreen = () => {
   const navigation = useNavigation();
@@ -24,6 +25,8 @@ export const ProfileScreen = () => {
           navigation.dispatch(DrawerActions.jumpTo('StackNavigator'))
         }
       />
+
+      <MaterialBottomTabsNavigator />
     </View>
   );
 };
